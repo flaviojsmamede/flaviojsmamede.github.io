@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #8d4b55;
+  --secondary-color: #213039;
+  --white: #fffaf9;
+  --font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-category p {
+  text-align: center;
+  font-size: 12px;
+  margin: 0;
+}
+
+.cards a {
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+header nav a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header h1 a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+section {
+  padding: 40px 20%;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 70vh;
+  text-align: center;
+}
+
+#about .content {
+  max-width: 70%;
+}
+
+#about h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+#about p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+#about button {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#about button:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  background-color: var(--white);
+}
+
+.project {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 10rem;
+  width: 20rem;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#contact {
+  text-align: center;
+  background-color: var(--white);
+  padding-top: 0px;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact input, #contact textarea, #contact a {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+#contact a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 15%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  background-color: var(--white);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#shadow-host-companion {
+  display: none;
+}
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about .content {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about .content {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #about .content {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #about .content {
+    max-width: 70%;
+  }
+}
